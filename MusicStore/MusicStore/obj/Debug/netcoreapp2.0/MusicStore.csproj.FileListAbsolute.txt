@@ -1,0 +1,12 @@
+D:\musicStore\MusicStore\MusicStore\bin\Debug\netcoreapp2.0\MusicStore.deps.json
+D:\musicStore\MusicStore\MusicStore\bin\Debug\netcoreapp2.0\MusicStore.runtimeconfig.json
+D:\musicStore\MusicStore\MusicStore\bin\Debug\netcoreapp2.0\MusicStore.runtimeconfig.dev.json
+D:\musicStore\MusicStore\MusicStore\bin\Debug\netcoreapp2.0\MusicStore.dll
+D:\musicStore\MusicStore\MusicStore\bin\Debug\netcoreapp2.0\MusicStore.pdb
+D:\musicStore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.csprojResolveAssemblyReference.cache
+D:\musicStore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.csproj.CoreCompileInputs.cache
+D:\musicStore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\musicStore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.AssemblyInfoInputs.cache
+D:\musicStore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.AssemblyInfo.cs
+D:\musicStore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.dll
+D:\musicStore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.pdb

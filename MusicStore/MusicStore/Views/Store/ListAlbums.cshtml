@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MusicStore.Models.Album>
+@{
+    ViewData["Title"] = "Albums";
+}
+
+
+<h2>Albums</h2>
+<h3>Genre Album</h3>
+<div>
+    <table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td col-md-2>
+                    <a asp-controller="Store" asp-action="Details" asp-route-id="@item.AlbumID">
+                        <img src="~/content/@item.AlbumArtUrl" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td col-md-2>
+                    <a asp-controller="Store" asp-action="Details" asp-route-id="@item.AlbumID">
+                        @item.Title
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+

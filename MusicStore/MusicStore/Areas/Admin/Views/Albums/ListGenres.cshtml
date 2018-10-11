@@ -1,0 +1,78 @@
+﻿@model MusicStore.Models.ViewModels.ListAlbumsViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form asp-area="Admin" asp-controller="Album" asp-action="ListGenres" method="get">
+    <label>Genre:</label>
+    <select asp-for="genreID" asp-items="Model.Genres">
+        <option value="0">-- Select a Genre ---</option>
+    </select>
+    <input type="submit" value="Filter" />
+</form>
+    
+<form asp-area="Admin" asp-controller="Album" asp-action="ListArtist" method="get">
+    <label>Artist:</label>
+    <select id="artitstID" asp-for="artistID" asp-items="Model.Artists">
+        <option value="0">-- Select an Artist ---</option>
+    </select>
+    <input type="submit" value="Filter" />
+</form>
+<form asp-area="Admin" asp-controller="Album" asp-action="ListTitles(title)" method="get">
+    <label>Title:</label>
+    <input type="text" id="artitstID" asp-for="artistID">       
+    <input type="submit" value="Filter" />
+</form>
+
+
+
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @(Html.DisplayNameFor(model => model.Albums[0].Artist))
+                </th>
+
+                <th>
+                    @(Html.DisplayNameFor(model => model.Albums[0].Genre))
+                </th>
+                <th>
+                    @(Html.DisplayNameFor(model => model.Albums[0].Title))
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Albums)
+            {
+                <tr>
+                    <td>
+                        @(Html.DisplayFor(modelItem => item.Artist.Name))
+                    </td>
+                    <td>
+                        @(Html.DisplayFor(modelItem => item.Genre.Name))
+                    </td>
+                    <td>
+                        @(Html.DisplayFor(modelItem => item.Title))
+                    </td>
+
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.AlbumID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.AlbumID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.AlbumID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+

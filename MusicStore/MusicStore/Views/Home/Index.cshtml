@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MusicStore.Models.Album>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<br />
+
+<div class="jumbotron" style="background-color:lightblue">
+    <div class="container">
+        <div class="row well well-lg">
+            <div class="col-md-6 col-md-offset-3 centerfy">
+                <div class="">
+                    <img src="~/images/logo.png" class="img-responsive text-center" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <table>
+        <tr>
+            @foreach (var item in Model)
+            {
+            <td width="200" height="200">
+                <a asp-controller="Store" asp-action="Details" asp-route-id="@item.AlbumID">
+                    <img src="~/content/@item.AlbumArtUrl" height="160" width="160" />
+                </a>
+                <a asp-controller="Store" asp-action="Details" asp-route-id="@item.AlbumID">
+                   @item.Title
+                </a>
+            </td>
+            }
+        </tr>
+    </table>
+</div>
