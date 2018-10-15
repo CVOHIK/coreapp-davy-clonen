@@ -10,3 +10,15 @@ D:\musicStore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.AssemblyI
 D:\musicStore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.AssemblyInfo.cs
 D:\musicStore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.dll
 D:\musicStore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.pdb
+C:\projecten\musicstore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.csprojAssemblyReference.cache
+C:\projecten\musicstore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.dll
+C:\projecten\musicstore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.pdb
+C:\projecten\musicstore\MusicStore\MusicStore\bin\Debug\netcoreapp2.0\MusicStore.deps.json
+C:\projecten\musicstore\MusicStore\MusicStore\bin\Debug\netcoreapp2.0\MusicStore.runtimeconfig.json
+C:\projecten\musicstore\MusicStore\MusicStore\bin\Debug\netcoreapp2.0\MusicStore.runtimeconfig.dev.json
+C:\projecten\musicstore\MusicStore\MusicStore\bin\Debug\netcoreapp2.0\MusicStore.dll
+C:\projecten\musicstore\MusicStore\MusicStore\bin\Debug\netcoreapp2.0\MusicStore.pdb
+C:\projecten\musicstore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.csproj.CoreCompileInputs.cache
+C:\projecten\musicstore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\projecten\musicstore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.AssemblyInfoInputs.cache
+C:\projecten\musicstore\MusicStore\MusicStore\obj\Debug\netcoreapp2.0\MusicStore.AssemblyInfo.cs

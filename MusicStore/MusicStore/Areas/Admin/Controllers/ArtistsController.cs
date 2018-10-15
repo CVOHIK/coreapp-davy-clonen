@@ -23,9 +23,9 @@ namespace MusicStore.Areas.Admin
             _context = context;
         }
 
-        public IActionResult FilterArtist(char letter)
+        public IActionResult FilterArtist(string id)
         {
-            var artists = _context.Artists.Where(a => a.Name.StartsWith(letter)).OrderBy(a => a.Name).ToList();
+            var artists = _context.Artists.Where(a => a.Name.StartsWith(id)).OrderBy(a => a.Name).ToList();
             return View( artists);
         }
 
