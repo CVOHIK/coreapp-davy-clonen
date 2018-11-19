@@ -7,24 +7,26 @@
 <h2>Albums</h2>
 <h3>Genre Album</h3>
 <div>
-    <table>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td col-md-2>
-                    <a asp-controller="Store" asp-action="Details" asp-route-id="@item.AlbumID">
+    <div class="container-fluid">
+       
+        <div class="row">
+            @foreach (var item in Model)
+            {
+            <div class="col-md-2" padding="6px" height="200px" width="200px">
+                <div>
+                    <a asp-controller="Store" asp-action="Details" asp-route-id="@item.AlbumID" height="175" width="175">
                         <img src="~/content/@item.AlbumArtUrl" />
                     </a>
-                </td>
-            </tr>
-            <tr>
-                <td col-md-2>
+                </div>
+                <div>
                     <a asp-controller="Store" asp-action="Details" asp-route-id="@item.AlbumID">
                         @item.Title
                     </a>
-                </td>
-            </tr>
-        }
-    </table>
+                </div>                              
+            </div>
+            }
+            </div>
+        
+    </div>
 </div>
 
