@@ -24,50 +24,43 @@ namespace MusicStore.Areas.Admin
             _context = context;
         }
 
-        public IActionResult ListGenres(int? genreID)
+        public IActionResult ListGenres(int? genreID,int? artistID,string id)
         {
-
+           
             
-            var albums = from a in _context.Albums.OrderBy(a => a.Title) select a;
+            var albums = from a in _context.Albums
+                         .Include(a => a.Genre)
+                         .Include(a => a.Artist)
+                         .OrderBy(a => a.Title) select a;
 
+          
             if (genreID != null && genreID != 0)
             {
                albums = albums.Where(a => a.GenreID == genreID);
             }
 
-            var listAlbumsVM = new ListAlbumsViewModel
-            {
-                Albums = albums.ToList(),
-
-                Genres = new SelectList(_context.Genres.OrderBy(g => g.Name), "GenreID", "Name"),
-                genreID = (genreID == null) ? 0 : (int)genreID,
-                Artists = new SelectList(_context.Artists.OrderBy(a => a.Name), "ArtistID", "Name"),
-                
-
-            };
-
-            return View(listAlbumsVM);
-        }
-
-        public IActionResult ListArtists(int? artistID)
-        {
-            var albums = from a in _context.Albums.OrderBy(a => a.Title) select a;
-
             if (artistID != null && artistID != 0)
             {
                 albums = albums.Where(a => a.ArtistID == artistID);
+            } 
+            
+            if(id != null && id != "")
+            {
+                albums = albums.Where(a => a.Title.Contains(id));
             }
 
             var listAlbumsVM = new ListAlbumsViewModel
-            {
+            {     
+                
                 Albums = albums.ToList(),
                 Genres = new SelectList(_context.Genres.OrderBy(g => g.Name), "GenreID", "Name"),
+                genreID = (genreID == null) ? 0 : (int)genreID,
                 Artists = new SelectList(_context.Artists.OrderBy(a => a.Name), "ArtistID", "Name"),
                 artistID = (artistID == null) ? 0 : (int)artistID
             };
-
             return View(listAlbumsVM);
         }
+    
      
 
         // GET: Admin/Albums
